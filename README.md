@@ -1,6 +1,6 @@
 # CoLT: Teaching Multi-Modal Models to Think with Chain of Latent Thoughts (ECCV2026)
 
-[[📖 Paper](https://arxiv.org/)] [[🤗 CoLT-8B-model](https://huggingface.co/OneThink/CoLT-8B)] [[🤗 CoLT-train-data](https://huggingface.co/datasets/hulianyuyy/CoLT_Train_Dataset)] 
+[[📖 Paper](https://arxiv.org/)] [[🤗 CoLT-8B-model](https://huggingface.co/hulianyuyy/CoLT-8B)] [[🤗 CoLT-train-data](https://huggingface.co/datasets/hulianyuyy/CoLT_Train_Dataset)] 
 
 
 
@@ -72,6 +72,8 @@ For more details for the SFT environment installation, please refer to [LLaMA-Fa
 Then, download the training datasets [[🤗 CoLT-train-data](https://huggingface.co/datasets/hulianyuyy/CoLT_Train_Dataset)] and unzip all the data.
 
 You can unzip all data by simply running ``python unzip_all_data.py``. Note that you need to first set the root dir in the ``unzip_all_data.py``.
+
+Then create soft link to the current dir by running ``ln -s /path_to_downloaded_dataset ./LLaMA-Factory/data/``. 
 
 ## 🚀 Training
 
