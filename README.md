@@ -1,4 +1,4 @@
-# CoLT: Teaching Multi-Modal Models to Think with Chain of Latent Thoughts
+# CoLT: Teaching Multi-Modal Models to Think with Chain of Latent Thoughts (ECCV2026)
 
 [[📖 Paper](https://arxiv.org/)] [[🤗 CoLT-8B-model](https://huggingface.co/OneThink/OneThinker-8B)] [[🤗 CoLT-train-data](https://huggingface.co/datasets/hulianyuyy/CoLT_Train_Dataset)] 
 
@@ -14,7 +14,7 @@ We introduce **CoLT**, an latent reasoning model that **reduce the inference tim
 
 Unlike most previous latent reasoning methods (e.g., LVR, LaCoT and MoNet in multimodal reasoning), which use **auxiliary images** to supervise the latent reasoning process and brings **costly annotation costs** with severely limited the training copus, our method adopt **pure textual CoT annotations** for training, which can fully **reduce the burden on labelling additional auxiliary images** and **adopt existing textual CoT annotations**.
 
-All code, models, and data are fully released.
+**All code, models, and data are fully released.**
 
 ## 🔥 News
 - [2026/06] We release the code, model, data of CoLT
@@ -47,7 +47,7 @@ Our model obtains **significant performance gains** after training based on Qwen
   <img src="./assets/efficiency.png" alt="Descriptive alt text" width="90%">
 </div>
 
-Besides, we also observe significant inference time reduction on visual tasks requiring complex reasoning. For example, on MMStar and MMT-Bench, text CoT requires **7.24 s (MMStar)** and **7.38 s (MMT-Bench)** to produce **∼142** and **∼139** reasoning tokens respectively, whereas CoLT completes generation in **0.32 s** and **0.33 s** using only **3 latent vectors**, achieving **22.6× and 22.4× reduction** in generation time.  Overall, CoLT delivers **10.1× (MMStar)** and **10.1× (MMT-Bench)** end-to-end speedup while maintaining higher accuracy
+Besides, we also observe significant inference time reduction on visual tasks requiring complex reasoning. For example, on MMStar and MMT-Bench, text CoT requires **7.24s (MMStar)** and **7.38s (MMT-Bench)** to produce **∼142** and **∼139** reasoning tokens respectively, whereas CoLT completes generation in **0.32s** and **0.33s** using only **3 latent vectors**, achieving **22.6× and 22.4× reduction** in generation time.  Overall, CoLT delivers **10.1× (MMStar)** and **10.1× (MMT-Bench)** end-to-end speedup while maintaining higher accuracy
 
 
 ## 📐 Set up

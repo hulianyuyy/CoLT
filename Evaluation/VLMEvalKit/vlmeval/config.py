@@ -1098,43 +1098,27 @@ qwen3vl_series = {
         ),
         post_process=True
     ),
+    "Qwen3-VL-8B-Instruct-COLT": partial(
+        Qwen3VLChat,
+        model_path="CoLT/CoLT-8B",
+        use_custom_prompt=False,
+        use_vllm=False,
+        do_sample=False, 
+        max_pixels=256*32*32, # for video
+        max_new_tokens=8192,
+        system_prompt= (
+            "Please answer this question based on the visual content."
+            "Provide your thinking process between the <think> and </think> tags, and then give your final answer between the <answer> and </answer> tags."
+            "At the end, you must output the final answer in the format:\n"
+            "<think>\nyour_thinking_process\n</think>\n\n<answer>\nyour_answer_here\n</answer>\n\n"
+        ),
+        post_process=True
+    ),
     "Qwen3-VL-8B-Instruct-OneThinker": partial(
         Qwen3VLChat,
         model_path="OneThinker/OneThinker-8B",
         use_custom_prompt=False,
-        use_vllm=True,
-        do_sample=False, 
-        max_pixels=256*32*32, # for video
-        max_new_tokens=8192,
-        system_prompt= (
-            "Please answer this question based on the visual content."
-            "Provide your thinking process between the <think> and </think> tags, and then give your final answer between the <answer> and </answer> tags."
-            "At the end, you must output the final answer in the format:\n"
-            "<think>\nyour_thinking_process\n</think>\n\n<answer>\nyour_answer_here\n</answer>\n\n"
-        ),
-        post_process=True
-    ),
-    "Qwen3-VL-8B-Instruct-OneThinker_rl_grad_accu_4_epoch2_step300": partial(
-        Qwen3VLChat,
-        model_path="/mnt/tidal-alsh01/usr/dawo/qinshengqian/c1/OneThinker/EasyR1/checkpoints_grad_accu_4_epoch2-rl/global_step_300/actor/huggingface",
-        use_custom_prompt=False,
-        # use_vllm=True,
-        do_sample=False, 
-        max_pixels=256*32*32, # for video
-        max_new_tokens=8192,
-        system_prompt= (
-            "Please answer this question based on the visual content."
-            "Provide your thinking process between the <think> and </think> tags, and then give your final answer between the <answer> and </answer> tags."
-            "At the end, you must output the final answer in the format:\n"
-            "<think>\nyour_thinking_process\n</think>\n\n<answer>\nyour_answer_here\n</answer>\n\n"
-        ),
-        post_process=True
-    ),
-    "Qwen3-VL-8B-Instruct-COLT": partial(
-        Qwen3VLChat,
-        model_path="/mnt/tidal-alsh01/usr/dawo/qinshengqian/c1/OneThinker/colt_test/",
-        use_custom_prompt=False,
-        # use_vllm=True,
+        use_vllm=False,
         do_sample=False, 
         max_pixels=256*32*32, # for video
         max_new_tokens=8192,
