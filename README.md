@@ -97,7 +97,7 @@ torchrun --nproc-per-node=1 run.py --data your_benchmark --model Qwen3-VL-8B-Ins
 
 **One GPU** is enough for CoLT to perform inference.
 
-Note that if **as CoLT and Qwen3-VL-8B share the same backbone, if you want to run inference with the original Qwen3-VL-8B, you shuold turn off latent reasoning model by setting ``self.latent_reasoning_mode = False`` in [modeling_qwen3_vl.py](./transformers-4.57.0/src/transformers/models/qwen3_vl/modeling_qwen3_vl.py)**.
+Note that if **as CoLT and Qwen3-VL-8B share the same backbone, if you want to run inference with the original Qwen3-VL-8B, you shuold turn off latent reasoning model by setting ``self.latent_reasoning_mode = False`` in [modeling_qwen3_vl.py](./transformers-4.57.0/src/transformers/models/qwen3_vl/modeling_qwen3_vl.py#L1480)**.
 
 ## Acknowledgements
 
