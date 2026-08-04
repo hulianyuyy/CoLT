@@ -86,6 +86,8 @@ bash ./LLaMA-Factory/local_scripts/run_colt_sft.sh
 ```
 
 ## 🔮 Inference & Evaluation
+We provide a pre-buit anaconda environment suitable for Ubuntu 22.04, and you may download it [here](https://drive.google.com/file/d/1kU6RL068WtLaqTwcwKU0YQ68h4pKjXkW/view?usp=sharing). We also provide pretrained weights, and you can download it [here](https://huggingface.co/hulianyuyy/CoLT-8B) for reproduction, (it will be download automatically if you run evaluation following below instructions). Note that results may vary across different enrivonments due to various numerical implemtations.
+
 Since CoLT-8B shares the same architecture as Qwen3-VL-8B, it naturally supports easy and efficient inference.
 
 For most visual tasks, we use  [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) for evaluation, you could run:
